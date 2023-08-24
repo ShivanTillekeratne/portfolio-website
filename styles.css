@@ -503,3 +503,17 @@ background: rgb(40, 20, 220)!important;
     color: blue;
     background: none;
 }
+ /* footer section styling */
+ footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span b{
+    color:  aqua;
+    text-decoration: none;
+}
+footer span b:hover{
+    color: rgb(40, 20, 220);
+}
