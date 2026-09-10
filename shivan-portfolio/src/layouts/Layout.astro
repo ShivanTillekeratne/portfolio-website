@@ -1,6 +1,7 @@
----
-const { title = "Shivan Tillekeratne" } = Astro.props;
----
+  ---
+  import Navbar from "../components/Navbar.astro";
+  const { title = "Shivan Tillekeratne" } = Astro.props;
+  ---
 
 <!doctype html>
 <html lang="en">
@@ -12,7 +13,11 @@ const { title = "Shivan Tillekeratne" } = Astro.props;
   </head>
 
   <body>
-    <slot />
+    <Navbar />
+  
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
