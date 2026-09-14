@@ -1,26 +1,321 @@
 ---
 import MainLayout from "../layouts/Layout.astro";
+import ExpertiseCard from "../components/ExpertiseCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import ResearchHighlight from "../components/ResearchHighlight.astro";
 ---
 
-<MainLayout title="Shivan Tillekeratne | AI Engineer">
+<MainLayout
+  title="Shivan Tillekeratne | AI Engineer"
+  description="Shivan Tillekeratne — AI Engineer focused on artificial intelligence, machine learning, automation, and applied research."
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <div class="grid items-center gap-12 md:grid-cols-2">
+      <!-- Left: Introduction -->
+      <div>
+        <p class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500">
+          AI Engineer
+        </p>
+      
+        <h1 class="text-5xl font-bold tracking-tight text-gray-900">
+          Hi, I'm Shivan Tillekeratne.
+        </h1>
+      
+        <p class="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+          I build practical AI systems, intelligent automation solutions,
+          and research-driven software, with a focus on applying artificial
+          intelligence to real-world problems.
+        </p>
 
-  <section>
-    <p>AI Engineer</p>
+        <div class="mt-8 flex flex-wrap gap-4">
 
-    <h1>
-      Hi, I'm Shivan Tillekeratne.
-    </h1>
+          <a
+            href="/projects"
+            class="rounded-md bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-700"
+          >
+            View My Projects
+          </a>
+        
+          <a
+            href="/contact"
+            class="rounded-md border border-gray-300 px-5 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-100"
+          >
+            Get In Touch
+          </a>
+        
+          <a
+            href="/cv/Shivan_Tillekeratne_CV.pdf"
+            class="rounded-md border border-gray-300 px-5 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-100"
+          >
+            Download CV
+          </a>
+        
+        </div>
 
-    <p>
-      Artificial Intelligence Engineer focused on building practical
-      AI systems, intelligent assistants, automation solutions,
-      and research-driven software.
-    </p>
+        <div class="mt-8 flex gap-6 text-sm">
 
-    <div>
-      <a href="/projects">View My Projects</a>
-      <a href="/contact">Get In Touch</a>
+          <a
+            href="https://github.com/ShivanTillekeratne"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 transition hover:text-gray-900"
+          >
+            GitHub
+          </a>
+        
+          <a
+            href="https://www.linkedin.com/in/shivan-tillekeratne"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 transition hover:text-gray-900"
+          >
+            LinkedIn
+          </a>
+        
+        </div>
+      </div>
+
+      <!-- Right: Profile Image -->
+      <div class="flex justify-center md:justify-end">
+        <div class="w-64 sm:w-72 md:w-80">
+          <img
+            src="/images/Uni_photo.jpeg"
+            alt="Shivan Tillekeratne"
+            class="aspect-square w-full rounded-2xl object-cover shadow-sm"
+          />
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- What I Do -->
+  <section class="border-t border-gray-100 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-6 py-20">
+
+      <div class="max-w-2xl">
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500">
+          What I Do
+        </p>
+
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+          Building practical solutions with AI
+        </h2>
+
+        <p class="mt-4 leading-7 text-gray-600">
+          My work sits at the intersection of artificial intelligence,
+          software engineering, automation and applied research.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+
+        <ExpertiseCard
+          title="AI Engineering"
+          description="Building practical artificial intelligence and machine learning systems for real-world applications."
+        />
+
+        <ExpertiseCard
+          title="AI Automation"
+          description="Designing intelligent assistants and automation workflows that improve business processes and efficiency."
+        />
+
+        <ExpertiseCard
+          title="Applied AI & Research"
+          description="Exploring AI techniques and applying research-driven approaches to practical problems."
+        />
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Selected Projects -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl px-6 py-20">
+
+      <div class="max-w-2xl">
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500">
+          Selected Projects
+        </p>
+
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+          Projects I've worked on
+        </h2>
+
+        <p class="mt-4 leading-7 text-gray-600">
+          A selection of projects spanning artificial intelligence,
+          machine learning, software engineering, and applied research.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+        <ProjectCard
+          title="Video-Based Human Activity Recognition"
+          description="Research project exploring human activity recognition from video using optical flow, segmentation and deep learning techniques with explainable AI."
+          technologies="Python · PyTorch · OpenCV · RAFT · SAM 2"
+        />
+
+        <ProjectCard
+          title="AI-Assisted Medical Fraud Detection"
+          description="Machine learning system designed to assist in identifying potentially fraudulent medical insurance claims."
+          technologies="Python · Django · React · MongoDB · scikit-learn"
+          href="https://github.com/ShivanTillekeratne/2nd_Year_Software_Project"
+        />
+
+        <ProjectCard
+          title="Automated Key Management System"
+          description="IoT-based system for automated key management and access control using embedded hardware and a web-based management system."
+          technologies="Arduino C · PHP · MySQL"
+          href="https://github.com/ShivanTillekeratne/Automated-Key-Management-System"
+        />
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience Snapshot -->
+  <section class="border-t border-gray-100 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-6 py-20">
+
+      <div class="max-w-2xl">
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500">
+          Experience
+        </p>
+
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+          From AI/ML engineering to AI engineering
+        </h2>
+
+        <p class="mt-4 leading-7 text-gray-600">
+          Professional experience building AI systems, intelligent assistants,
+          automation solutions, and software products.
+        </p>
+      </div>
+
+      <div class="mt-10 max-w-4xl space-y-10">
+
+        <ExperienceItem
+          role="AI Engineer"
+          organization="Inxai Pvt Ltd · Working with AllDigital Specialty"
+          period="Sep 2026 - Present"
+          description="Working on AI engineering initiatives involving practical artificial intelligence solutions, software integration, and intelligent systems."
+        />
+
+        <ExperienceItem
+          role="AI/ML Engineer Intern / Associate AI/ML Engineer"
+          organization="Previous professional experience"
+          period="Feb 2025 - Aug 2026"
+          description="Worked across AI assistants, chatbots, automation platforms, NLP, prompt engineering, API integration, documentation, testing, and deployment-oriented development."
+        />
+
+      </div>
+
+      <div class="mt-10">
+        <a
+          href="/experience"
+          class="text-sm font-medium text-gray-700 transition hover:text-gray-900 hover:underline"
+        >
+          View full experience →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research & Education -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-7xl px-6 py-20">
+
+      <div class="max-w-2xl">
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500">
+          Research & Education
+        </p>
+
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+          Academic foundation and Research interests
+        </h2>
+
+        <p class="mt-4 leading-7 text-gray-600">
+          My academic background in artificial intelligence complements my
+          practical engineering experience and interest in applied AI research.
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-10">
+
+        <ResearchHighlight
+          label="Research"
+          title="A Review of Explainable Artificial Intelligence (XAI) Techniques in Deep Learning Models"
+          description="A review exploring explainable artificial intelligence techniques used to improve the interpretability and understanding of deep learning models."
+        />
+
+        <ResearchHighlight
+          label="Education"
+          title="B.Sc. (Hons) in Artificial Intelligence"
+          description="University of Moratuwa · Completed 2026"
+        />
+
+      </div>
+
+      <div class="mt-10">
+        <a
+          href="/research"
+          class="text-sm font-medium text-gray-700 transition hover:text-gray-900 hover:underline"
+        >
+          Explore research →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+   <!-- Contact CTA -->
+  <section class="border-t border-gray-100 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-6 py-20">
+
+      <div class="max-w-3xl">
+
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500">
+          Get In Touch
+        </p>
+
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+          Let's connect
+        </h2>
+
+        <p class="mt-4 text-lg leading-8 text-gray-600">
+          I'm open to AI engineering opportunities, research collaborations,
+          and interesting projects involving artificial intelligence and
+          intelligent systems.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+
+          <a
+            href="/contact"
+            class="rounded-md bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-700"
+          >
+            Get In Touch
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/shivan-tillekeratne"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-md border border-gray-300 px-5 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-100"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 </MainLayout>
